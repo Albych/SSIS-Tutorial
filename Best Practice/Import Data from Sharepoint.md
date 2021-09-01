@@ -41,7 +41,7 @@
 >如果在 Design 模式下可以正常预览数据，但是在 Debug 时遇到了如下错误  
 `OData Source [2]] Error: Cannot acquire a managed connection from the run-time connection manager.`  
 `[SSIS.Pipeline] Error: OData Source failed validation and returned error code 0xC020801F.`  
-是由于网络连接的原因，需要开启 TLS 1.2 来访问网页，方法如下，参考 [References ][References 4]<a href = "https://docs.microsoft.com/en-us/archive/blogs/dataaccesstechnologies/tls-issue-with-ssis-package-while-accessing-odata-source-like-dynamics-ax-online" title = "TLS Issue with SSIS package while accessing OData Source like Dynamics AX Online">4</a> [ref](https://github.com/Albych/SSIS-Tutorial/blob/main/Best%20Practice/Import%20Data%20from%20Sharepoint.md/#references):  
+是由于网络连接的原因，需要开启 TLS 1.2 来访问网页，方法如下，参考 [References ][References 4]<a href = "https://docs.microsoft.com/en-us/archive/blogs/dataaccesstechnologies/tls-issue-with-ssis-package-while-accessing-odata-source-like-dynamics-ax-online" title = "TLS Issue with SSIS package while accessing OData Source like Dynamics AX Online">4</a> [ref](#references):  
 >1. 确保运行 SSIS 的电脑上已经安装了 .NET 4.6 或更新版本的 .NET Framework Runtime，可以从微软官网下载并安装。
 >2. 修改注册表，强制使用 TLS 1.2 进行访问。
 
