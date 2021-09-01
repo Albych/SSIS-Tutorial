@@ -41,7 +41,7 @@
 >如果在 Design 模式下可以正常预览数据，但是在 Debug 时遇到了如下错误  
 `OData Source [2]] Error: Cannot acquire a managed connection from the run-time connection manager.`  
 `[SSIS.Pipeline] Error: OData Source failed validation and returned error code 0xC020801F.`  
-是由于网络连接的原因，需要开启 TLS 1.2 来访问网页，方法如下，参考 [Reference 4](###References):  
+是由于网络连接的原因，需要开启 TLS 1.2 来访问网页，方法如下，参考 [References ][References 4]<a href = "https://docs.microsoft.com/en-us/archive/blogs/dataaccesstechnologies/tls-issue-with-ssis-package-while-accessing-odata-source-like-dynamics-ax-online" title = "TLS Issue with SSIS package while accessing OData Source like Dynamics AX Online">4</a>:  
 >1. 确保运行 SSIS 的电脑上已经安装了 .NET 4.6 或更新版本的 .NET Framework Runtime，可以从微软官网下载并安装。
 >2. 修改注册表，强制使用 TLS 1.2 进行访问。
 
@@ -49,8 +49,10 @@
 
 
 ---
-### References:  
+### References
 1. [Mircosoft SharePoint Foundation REST Interface](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ff521587)
 2. [Reading SharePoint Lists with Integration Services 2017](https://www.mssqltips.com/sqlservertip/1733/reading-sharepoint-lists-with-integration-services-2017/)
-3. [How to configure OData SSIS Connection for SharePoint Online](https://www.sqlshack.com/how-to-configure-odata-ssis-connection-for-sharepoint-online/)
+3. [How to configure OData SSIS Connection for SharePoint Online](https://www.sqlshack.com/how-to-configure-odata-ssis-connection-for-sharepoint-online/)  
 4. [TLS Issue with SSIS package while accessing OData Source like Dynamics AX Online](https://docs.microsoft.com/en-us/archive/blogs/dataaccesstechnologies/tls-issue-with-ssis-package-while-accessing-odata-source-like-dynamics-ax-online)
+
+[References 4]:<https://docs.microsoft.com/en-us/archive/blogs/dataaccesstechnologies/tls-issue-with-ssis-package-while-accessing-odata-source-like-dynamics-ax-online> "TLS Issue with SSIS package while accessing OData Source like Dynamics AX Online"
