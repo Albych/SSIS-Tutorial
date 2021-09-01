@@ -10,9 +10,42 @@
 
 # How to
 1. 创建一个新的 List 。  
-在 [Microsoft Lists](https://www.microsoft.com/en-us/microsoft-365/microsoft-lists) 按指引登录并创建一个新的 List。  
-![NewList](images\New List.png)  
+在 [Microsoft Lists](https://www.microsoft.com/en-us/microsoft-365/microsoft-lists) 按指引登录并创建一个新的 List。 
+![NewList](/images/NewList.png)
 
+2. `(Optional)` 配置 List，删除不需要的默认属性。  
+新建的 List 会默认将第一个列 `Title` 设为必填列，可以在设置页面中更改列的属性等。  
+![ListSetting](/images/ListSetting.png)
+![SettingDetail](/images/SettingDetail.png)
+
+3. 配置 SSIS 的数据源。  
+使用 SSIS 中的 `OData Source` 组件来连接 List  
+![SSISToolBoxOdata](/images/SSISToobBoxOdata.png)   
+配置 OData 数据源,点击 `New` 创建新的连接。  
+![](/images/ODataOverview.png)
+在连接配置页面填入 Sharepoint 地址与用户认证信息。  
+![](/images/ODataConnection.png)  
+配置完成以后返回前一个页面，在 Collection 中选择自己创建的 List 即可。
+> Sharepoint 地址获取方法如下  
+将创建的 List 地址的后半部分修改为 `_vti_bin/listdata.svc`。  
+例如，如果 List 地址为  
+`https://mydomian.sharepoint.com/personal/username/Lists/SSIS_Tutorial/AllItems.aspx`
+则对应的连接地址为  
+`https://mydomian.sharepoint.com/personal/username/_vti_bin/listdata.svc`
+
+>如果在配置连接时报错如下图  
+![](/images/NoSDK.png)  
+原因是电脑尚未安装 Sharepoint 的组件，可到 [SharePoint Server 2013 Client Components SDK](https://www.microsoft.com/en-pk/download/details.aspx?id=35585) 下载并安装即可。  
+
+4. 配置 Data Flow 并执行
+>如果在 Design 模式下可以正常预览数据，但是在 Debug 时遇到了如下错误  
+`OData Source [2]] Error: Cannot acquire a managed connection from the run-time connection manager.`  
+`[SSIS.Pipeline] Error: OData Source failed validation and returned error code 0xC020801F.`  
+是由于网络连接的原因，需要开启 TLS 1.2 来访问网页，方法如下，参考 [Reference 4](###Reference):  
+>1. 确保运行 SSIS 的电脑上已经安装了 .NET 4.6 或更新版本的 .NET Framework Runtime，可以从微软官网下载并安装。
+>2. 修改注册表，强制使用 TLS 1.2 进行访问。
+
+5. 至此，结束。
 
 
 ---
