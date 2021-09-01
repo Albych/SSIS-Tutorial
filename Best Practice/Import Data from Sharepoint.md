@@ -22,7 +22,7 @@
 使用 SSIS 中的 `OData Source` 组件来连接 List  
 ![SSISToolBoxOdata](/images/SSISToobBoxOdata.png)   
 配置 OData 数据源,点击 `New` 创建新的连接。  
-![](/images/ODataOverview.png)
+![](/images/ODataOverview.png)  
 在连接配置页面填入 Sharepoint 地址与用户认证信息。  
 ![](/images/ODataConnection.png)  
 配置完成以后返回前一个页面，在 Collection 中选择自己创建的 List 即可。
@@ -41,7 +41,7 @@
 >如果在 Design 模式下可以正常预览数据，但是在 Debug 时遇到了如下错误  
 `OData Source [2]] Error: Cannot acquire a managed connection from the run-time connection manager.`  
 `[SSIS.Pipeline] Error: OData Source failed validation and returned error code 0xC020801F.`  
-是由于网络连接的原因，需要开启 TLS 1.2 来访问网页，方法如下，参考 [Reference 4](###Reference):  
+是由于网络连接的原因，需要开启 TLS 1.2 来访问网页，方法如下，参考 [Reference 4](###References):  
 >1. 确保运行 SSIS 的电脑上已经安装了 .NET 4.6 或更新版本的 .NET Framework Runtime，可以从微软官网下载并安装。
 >2. 修改注册表，强制使用 TLS 1.2 进行访问。
 
