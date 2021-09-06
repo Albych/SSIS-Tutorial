@@ -29,7 +29,7 @@
 > Sharepoint 地址获取方法如下  
 将创建的 List 地址的后半部分修改为 `_vti_bin/listdata.svc`。  
 例如，如果 List 地址为  
-`https://mydomian.sharepoint.com/personal/username/Lists/SSIS_Tutorial/AllItems.aspx`
+`https://mydomian.sharepoint.com/personal/username/Lists/SSIS_Tutorial/AllItems.aspx`  
 则对应的连接地址为  
 `https://mydomian.sharepoint.com/personal/username/_vti_bin/listdata.svc`
 
