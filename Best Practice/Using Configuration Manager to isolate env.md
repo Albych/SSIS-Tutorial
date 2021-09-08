@@ -64,3 +64,4 @@
 ![测试](/images/ProjectParams6.png)  
 ![正式](/images/ProjectParams7.png)  
 
+同理，我们也可以配置数据库的连接字符串，参见 [Connectiong Manager using Connection String](Connectiong%20Manager%20using%20Connection%20String.md)。

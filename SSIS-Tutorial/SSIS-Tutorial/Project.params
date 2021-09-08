@@ -16,7 +16,28 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">C:\SSIS-Tutorial\SSIS-Tutorial\Sample Data\dev</SSIS:Property>
+        SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\SSIS-Tutorial\SSIS-Tutorial\Sample Data\pdt\County_City.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
+  <SSIS:Parameter
+    SSIS:Name="G_Flat_File">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{2ee5f48c-e46f-4573-9e38-361b09bee324}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">C:\SSIS-Tutorial\SSIS-Tutorial\Sample Data\pdt\county_city.csv</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
